@@ -488,3 +488,38 @@ main {
     max-width: 100%;
   }
 }
+
+/* MOBILE FIX for home feature cards */
+@media (max-width: 768px) {
+  .home-feature-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* single column layout */
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .feature-card {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+
+  .feature-image {
+    height: 220px; /* keep consistent image height */
+  }
+
+  .feature-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .feature-card p {
+    font-size: 1rem;
+  }
+
+  .feature-card .btn {
+    margin: 1rem auto 0;
+    display: block;
+    width: fit-content;
+  }
+}
