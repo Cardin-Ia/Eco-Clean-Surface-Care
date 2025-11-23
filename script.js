@@ -40,3 +40,18 @@ document.addEventListener("DOMContentLoaded", () => {
     showSection("home");
   }
 });
+
+// PHONE NUMBER MASK (xxx) xxx-xxxx
+const phoneInput = document.getElementById("phoneInput");
+if (phoneInput) {
+  phoneInput.addEventListener("input", function (e) {
+    let x = e.target.value.replace(/\D/g, "").slice(0, 10);
+    let formatted = "";
+
+    if (x.length > 0) formatted = "(" + x.substring(0, 3);
+    if (x.length >= 4) formatted += ") " + x.substring(3, 6);
+    if (x.length >= 7) formatted += "-" + x.substring(6, 10);
+
+    e.target.value = formatted;
+  });
+}
