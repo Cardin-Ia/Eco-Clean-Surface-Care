@@ -583,3 +583,40 @@ main {
     flex-direction: column;
   }
 }
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--green-light);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  border-left: 4px solid var(--green-main);
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.form-row label {
+  font-weight: 600;
+  color: var(--green-dark);
+  margin-bottom: 0.3rem;
+}
+
+.form-row input,
+.form-row textarea {
+  padding: 0.55rem 0.75rem;
+  border-radius: var(--radius);
+  border: 1px solid #cccccc;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+  outline: 2px solid var(--green-main);
+  border-color: var(--green-main);
+}
