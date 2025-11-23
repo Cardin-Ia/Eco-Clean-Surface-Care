@@ -10,7 +10,6 @@
   --radius: 6px;
 }
 
-/* GLOBAL RESET */
 *,
 *::before,
 *::after {
@@ -27,7 +26,6 @@ body {
   scroll-behavior: smooth;
 }
 
-/* HEADER */
 .site-header {
   background-color: var(--green-dark);
   color: #ffffff;
@@ -100,7 +98,6 @@ body {
   width: 100%;
 }
 
-/* SECTIONS */
 main {
   padding-bottom: 3rem;
 }
@@ -286,7 +283,6 @@ main {
   text-align: left;
 }
 
-/* divider */
 .divider {
   height: 2px;
   max-width: 260px;
@@ -371,9 +367,6 @@ main {
   margin-right: auto;
 }
 
-/* ============================= */
-/* 📌 FIX #1 — JOTFORM FULL SIZE */
-/* ============================= */
 #contact iframe,
 #contact .supernova,
 #contact .form-all {
@@ -389,7 +382,6 @@ main {
   margin: 0 auto;
 }
 
-/* FOOTER */
 .site-footer {
   background-color: var(--green-dark);
   color: #ffffff;
@@ -423,9 +415,6 @@ main {
   font-size: 0.9rem;
 }
 
-/* ================================ */
-/* 📌 FIX #2 — SMALLER MOBILE HEADER */
-/* ================================ */
 
 @media (max-width: 600px) {
   .site-header {
@@ -468,9 +457,9 @@ main {
     padding-bottom: 0.1rem;
   }
 }
-/* Fix JotForm bottom spacing */
+
 #contact iframe {
-    height: 1000px !important;   /* Force correct height */
+    height: 1000px !important;   
     min-height: 1000px !important;
     max-height: 1400px !important;
     display: block !important;
@@ -480,7 +469,6 @@ main {
     padding-bottom: 0 !important;
 }
 
-/* Remove huge empty area JotForm injects */
 .jotform-form,
 #JotFormIFrame,
 iframe[src*="jotform"] {
@@ -489,7 +477,6 @@ iframe[src*="jotform"] {
     height: auto !important;
 }
 
-/* === Compact Mobile Header Fix === */
 @media (max-width: 600px) {
   .site-header {
     padding: 0.25rem 0.5rem;
