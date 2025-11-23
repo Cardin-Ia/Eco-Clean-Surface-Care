@@ -11,7 +11,6 @@
 }
 
 /* GLOBAL RESET */
-
 *,
 *::before,
 *::after {
@@ -29,7 +28,6 @@ body {
 }
 
 /* HEADER */
-
 .site-header {
   background-color: var(--green-dark);
   color: #ffffff;
@@ -103,7 +101,6 @@ body {
 }
 
 /* SECTIONS */
-
 main {
   padding-bottom: 3rem;
 }
@@ -136,7 +133,6 @@ main {
 }
 
 /* HOME */
-
 .hero {
   max-width: var(--max-width);
   margin: 1.5rem auto 1rem;
@@ -192,14 +188,16 @@ main {
 
 .feature-image {
   width: 100%;
-  height: 240px; /* bigger & cleaner images */
+  height: 240px;
   border-radius: var(--radius);
   overflow: hidden;
   margin-bottom: 0.75rem;
 }
 
-.placeholder {
-  background: linear-gradient(135deg, rgba(47, 107, 63, 0.12), rgba(47, 107, 63, 0.04));
+.feature-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .feature-card h3 {
@@ -217,7 +215,6 @@ main {
 }
 
 /* BUTTONS */
-
 .btn {
   border: none;
   border-radius: 999px;
@@ -238,21 +235,17 @@ main {
   background-color: #275531;
 }
 
-/* HOME PAGE BUTTONS */
 .btn.secondary {
-  background-color: var(--green-main);   
-  color: #ffffff;                     
-  border: 1px solid var(--green-main);   
+  background-color: var(--green-main);
+  color: #ffffff;
+  border: 1px solid var(--green-main);
 }
 
 .btn.secondary:hover {
-  background-color: #275531;             
-  color: #ffffff;
+  background-color: #275531;
 }
 
-
 /* ABOUT & SERVICES */
-
 .about-container,
 .services-container {
   text-align: center;
@@ -265,7 +258,6 @@ main {
   margin-right: auto;
 }
 
-/* service columns centered but bullet lists left-aligned */
 .service-columns {
   display: flex;
   flex-wrap: wrap;
@@ -295,7 +287,6 @@ main {
 }
 
 /* divider */
-
 .divider {
   height: 2px;
   max-width: 260px;
@@ -305,7 +296,6 @@ main {
 }
 
 /* HOW IT WORKS */
-
 .about-how {
   margin-top: 1.5rem;
 }
@@ -321,16 +311,11 @@ main {
   color: var(--green-main);
 }
 
-/* SERVICES PAGE DETAILS */
-
+/* SERVICES GALLERY */
 .service-types ul {
   padding-left: 1.2rem;
   display: inline-block;
   text-align: left;
-}
-
-.service-types li + li {
-  margin-top: 0.35rem;
 }
 
 .pricing {
@@ -343,12 +328,8 @@ main {
   text-align: left;
 }
 
-.pricing-note {
-  margin-top: 0.6rem;
-}
-
 .service-gallery {
-  margin-top: 0.9rem; /* tighter spacing */
+  margin-top: 0.9rem;
 }
 
 .gallery-row {
@@ -373,28 +354,42 @@ main {
 
 .gallery-photo {
   width: 100%;
-  aspect-ratio: 3 / 2;    
+  aspect-ratio: 3 / 2;
   border-radius: var(--radius);
 }
 
 /* CONTACT */
-
-.contact-highlight {
-  font-size: 1.05rem;
-  font-weight: 600;
-  margin-top: 1.5rem;
+#contact .page-container {
+  text-align: center;
 }
 
-.contact-form-placeholder {
-  margin-top: 2rem;
-  padding: 1.25rem;
-  border-radius: var(--radius);
-  background-color: var(--green-light);
-  color: var(--text-muted);
+#contact p,
+#contact .contact-highlight,
+#contact a {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ============================= */
+/* 📌 FIX #1 — JOTFORM FULL SIZE */
+/* ============================= */
+#contact iframe,
+#contact .supernova,
+#contact .form-all {
+  width: 100% !important;
+  max-width: 900px !important;
+  min-width: 280px !important;
+}
+
+#contact iframe {
+  height: 1200px !important;
+  border: none !important;
+  display: block;
+  margin: 0 auto;
 }
 
 /* FOOTER */
-
 .site-footer {
   background-color: var(--green-dark);
   color: #ffffff;
@@ -428,82 +423,68 @@ main {
   font-size: 0.9rem;
 }
 
-/* RESPONSIVE */
-
-@media (max-width: 900px) {
-  .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
-  }
-
-  .logo-wrap {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .home-feature-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .pricing {
-    width: 100%;
-  }
-}
+/* ================================ */
+/* 📌 FIX #2 — SMALLER MOBILE HEADER */
+/* ================================ */
 
 @media (max-width: 600px) {
-  .header-inner {
-    padding: 0.5rem 1rem;
+  .site-header {
+    padding: 0.3rem 0.5rem;
   }
 
-  .logo-wrap {
+  .header-inner {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 0.3rem;
   }
 
+  .logo-wrap {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .logo-img {
+    height: 38px;
+  }
+
   .logo-text h1 {
-    font-size: 1.35rem;
+    font-size: 1.05rem;
+  }
+
+  .logo-text p {
+    font-size: 0.7rem;
   }
 
   .main-nav {
-    justify-content: flex-start;
-    gap: 0.9rem;
+    gap: 0.6rem;
+    font-size: 0.75rem;
+    flex-wrap: nowrap;
+    justify-content: center;
   }
 
-  .page-section {
-    padding: 2rem 1rem 2.5rem;
-  }
-
-  .hero-subtitle {
-    font-size: 0.8rem;
-  }
-
-  .home-logo-center img {
-    max-width: 220px;
-  }
-
-  .gallery-item {
-    max-width: 100%;
+  .nav-link {
+    font-size: 0.75rem;
+    padding-bottom: 0.1rem;
   }
 }
-
-/* Home card image override */
-.feature-photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: var(--radius);
+/* Fix JotForm bottom spacing */
+#contact iframe {
+    height: 1000px !important;   /* Force correct height */
+    min-height: 1000px !important;
+    max-height: 1400px !important;
+    display: block !important;
 }
 
-#contact .page-container {
-    text-align: center;
+#contact {
+    padding-bottom: 0 !important;
 }
 
-#contact p,
-#contact .contact-highlight,
-#contact a {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+/* Remove huge empty area JotForm injects */
+.jotform-form,
+#JotFormIFrame,
+iframe[src*="jotform"] {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    height: auto !important;
 }
