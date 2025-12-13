@@ -1,5 +1,3 @@
-// Simple tab-style navigation using one HTML file
-
 document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(".nav-link");
   const sections = document.querySelectorAll(".page-section");
@@ -16,8 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         link.getAttribute("data-section") === targetId
       );
     });
-
-    // Update hash for basic back/forward behavior
+    
     window.location.hash = targetId;
     window.scrollTo({ top: 0, behavior: "instant" });
   }
@@ -32,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // On load, show section from hash if present
+
   const initialHash = window.location.hash.replace("#", "");
   if (initialHash && document.getElementById(initialHash)) {
     showSection(initialHash);
@@ -41,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// PHONE NUMBER MASK (xxx) xxx-xxxx
+
 const phoneInput = document.getElementById("phoneInput");
 if (phoneInput) {
   phoneInput.addEventListener("input", function (e) {
@@ -55,3 +52,4 @@ if (phoneInput) {
     e.target.value = formatted;
   });
 }
+
