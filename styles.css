@@ -424,10 +424,9 @@ main {
 .jotform-container iframe {
   width: 100%;
   border: none;
-  height: 900px;      /* adjust if you want more/less visible form */
+  height: 900px;     
 }
 
-/* slightly taller on small phones if needed */
 @media (max-width: 600px) {
   .jotform-container iframe {
     height: 1000px;
@@ -435,7 +434,6 @@ main {
 }
 
 @media (max-width: 600px) {
-  /* tighten header on phones */
   .site-header {
     position: sticky;
     top: 0;
@@ -448,9 +446,8 @@ main {
     gap: 0.15rem;
   }
 
-  /* shrink / simplify logo on mobile */
   .logo-img {
-    display: none;              /* hide big logo to save space */
+    display: none;           
   }
 
   .logo-text h1 {
@@ -459,7 +456,7 @@ main {
   }
 
   .logo-text p {
-    display: none;              /* hide tagline on mobile */
+    display: none;            
   }
 
   .main-nav {
@@ -489,11 +486,10 @@ main {
   }
 }
 
-/* MOBILE FIX for home feature cards */
 @media (max-width: 768px) {
   .home-feature-grid {
     display: grid;
-    grid-template-columns: 1fr; /* single column layout */
+    grid-template-columns: 1fr; 
     gap: 1.5rem;
     padding: 0 1rem;
   }
@@ -506,7 +502,7 @@ main {
   }
 
   .feature-image {
-    height: 220px; /* keep consistent image height */
+    height: 220px; 
   }
 
   .feature-card h3 {
@@ -524,7 +520,6 @@ main {
   }
 }
 
-/* ECO CLEAN CONTACT FORM */
 .eco-form {
   max-width: 650px;
   margin: 2rem auto 0;
@@ -577,7 +572,6 @@ main {
   background-color: #275531;
 }
 
-/* MOBILE FIX: Make name inputs stack */
 @media (max-width: 600px) {
   .eco-row {
     flex-direction: column;
